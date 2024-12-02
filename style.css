@@ -1,16 +1,26 @@
+* {
+    border: 0px;
+    box-sizing: border-box;
+}
+
 :root {
-    --grid-size: 35px;
+    --grid-width: 900px;
+    --grid-box: calc( var(--grid-width)/16)
 }
 
 .gridContainer {
     display: flex;
     flex-wrap: wrap;
-    width: calc( (var(--grid-size) + 2px) * 16 );
+    width: var(--grid-width);
 }
 
 .gridBox {
-    border: 1px solid black;
-    height: var(--grid-size);
-    width: var(--grid-size);
+    box-shadow: 1px 1px 1px -1px black;
+    height: var(--grid-box) ;
+    width: var(--grid-box);
     flex: 0 0 auto;
+}
+
+.gridBox.active {
+    background-color: aqua;
 }
