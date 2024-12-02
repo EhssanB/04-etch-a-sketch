@@ -1,0 +1,16 @@
+:root {
+    --grid-size: 35px;
+}
+
+.gridContainer {
+    display: flex;
+    flex-wrap: wrap;
+    width: calc( (var(--grid-size) + 2px) * 16 );
+}
+
+.gridBox {
+    border: 1px solid black;
+    height: var(--grid-size);
+    width: var(--grid-size);
+    flex: 0 0 auto;
+}
